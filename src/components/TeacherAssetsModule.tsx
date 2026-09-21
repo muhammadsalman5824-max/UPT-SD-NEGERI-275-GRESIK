@@ -514,7 +514,7 @@ export const TeacherAssetsModule: React.FC<TeacherAssetsModuleProps> = ({
                     </div>
                   ) : (
                     <div>
-                      <h2 className="text-lg font-bold text-white">Drs. H. Sukardi, M.Pd</h2>
+                      <h2 className="text-lg font-bold text-white">Muhammad Salman Al farisi, S.Pd.</h2>
                       <p className="text-xs text-emerald-200">Kepala UPT SD Negeri 275 Gresik</p>
                     </div>
                   )}
@@ -1011,7 +1011,7 @@ export const TeacherAssetsModule: React.FC<TeacherAssetsModuleProps> = ({
                   type="text"
                   value={editUserNama}
                   onChange={(e) => setEditUserNama(e.target.value)}
-                  placeholder="Contoh: Drs. H. Sukardi, M.Pd / Nur Aini, S.Pd"
+                  placeholder="Contoh: Muhammad Salman Al farisi, S.Pd. / Nur Aini, S.Pd"
                   className="w-full text-xs px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                   required
                 />

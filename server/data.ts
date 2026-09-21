@@ -14,14 +14,14 @@ export class DataStore {
   users: User[] = [
     {
       id: 1,
-      nama: 'Drs. H. Sukardi, M.Pd',
+      nama: 'Muhammad Salman Al farisi, S.Pd.',
       username: 'kasek',
       password_hash: 'password123',
       role: 'kepala_sekolah',
       nip_nisn: '196805121992031005',
       nomor_wa: '081234567890',
       jabatan: 'Kepala UPT SD Negeri 275 Gresik',
-      email: 'sukardi.sdn275@gresik.sch.id',
+      email: 'salman.sdn275@gresik.sch.id',
     },
     {
       id: 2,

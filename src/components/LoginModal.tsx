@@ -48,7 +48,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({
     {
       role: 'kepala_sekolah',
       title: 'Kepala Sekolah (Evaluator)',
-      name: 'Drs. H. Sukardi, M.Pd',
+      name: 'Muhammad Salman Al farisi, S.Pd.',
       username: 'kasek',
       icon: ShieldCheck,
       color: 'border-amber-300 bg-amber-50 hover:bg-amber-100 text-amber-950',

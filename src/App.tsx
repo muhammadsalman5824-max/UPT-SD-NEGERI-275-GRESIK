@@ -80,9 +80,14 @@ export default function App() {
       setFeedbackList(fbs);
       setFeedbackSummary(fbSum);
 
-      // Default active user to Kepala Sekolah if not set
+      // Default active user to Kepala Sekolah if not set, or sync with updated user data
       if (!currentUser && users.length > 0) {
         setCurrentUser(users[0]);
+      } else if (currentUser && users.length > 0) {
+        const freshUser = users.find((u) => u.id === currentUser.id);
+        if (freshUser) {
+          setCurrentUser(freshUser);
+        }
       }
     } catch (err) {
       console.error('Failed to load SI-PASTI data:', err);
