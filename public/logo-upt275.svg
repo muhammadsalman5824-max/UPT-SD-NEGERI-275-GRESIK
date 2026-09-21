@@ -1,0 +1,337 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient for Shield -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="45%" stop-color="#40c4ff" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Warm Glow Behind Book -->
+    <radialGradient id="bookGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fde047" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#fb923c" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Monument Shading -->
+    <linearGradient id="monumentLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+    <linearGradient id="monumentRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ca8a04" />
+      <stop offset="100%" stop-color="#a16207" />
+    </linearGradient>
+
+    <!-- Star Shading -->
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff066" />
+      <stop offset="100%" stop-color="#eab308" />
+    </linearGradient>
+
+    <!-- Outer Glow Filter -->
+    <filter id="subtleDrop" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Outer Pentagon Shield Path with Rounded Corners -->
+  <path d="M 235,46 
+           C 244,38 256,38 265,46
+           L 446,198
+           C 458,208 460,224 452,238
+           L 378,416
+           C 371,432 356,442 338,444
+           L 162,444
+           C 144,442 129,432 122,416
+           L 48,238
+           C 40,224 42,208 54,198
+           Z"
+        fill="url(#shieldGrad)"
+        stroke="#00b0ff"
+        stroke-width="14"
+        stroke-linejoin="round"
+        filter="url(#subtleDrop)" />
+
+  <!-- Inner White Shield Border Accent -->
+  <path d="M 238,62 
+           C 245,56 255,56 262,62
+           L 430,204
+           C 438,211 440,221 435,230
+           L 366,396
+           C 361,408 349,416 335,417
+           L 165,417
+           C 151,416 139,408 134,396
+           L 65,230
+           C 60,221 62,211 70,204
+           Z"
+        fill="none"
+        stroke="#ffffff"
+        stroke-width="7"
+        stroke-linejoin="round"
+        opacity="0.95" />
+
+  <!-- TOP STAR -->
+  <g transform="translate(250, 88)">
+    <polygon points="0,-22 6.5,-8 21.5,-6 10.5,5 13.5,20 0,12.5 -13.5,20 -10.5,5 -21.5,-6 -6.5,-8"
+             fill="url(#starGrad)"
+             stroke="#dc2626"
+             stroke-width="2.5"
+             stroke-linejoin="round" />
+  </g>
+
+  <!-- WIREFRAME GLOBE (Behind Monument & Figures) -->
+  <g transform="translate(250, 245)" stroke="#1e3a8a" stroke-width="2.4" fill="none" opacity="0.85">
+    <!-- Globe Outer Circle -->
+    <circle cx="0" cy="0" r="95" stroke="#1e3a8a" stroke-width="2.8" />
+    <!-- Latitudes -->
+    <ellipse cx="0" cy="-60" rx="74" ry="18" />
+    <ellipse cx="0" cy="-30" rx="90" ry="24" />
+    <line x1="-95" y1="0" x2="95" y2="0" stroke-width="2.6" />
+    <ellipse cx="0" cy="30" rx="90" ry="24" />
+    <ellipse cx="0" cy="60" rx="74" ry="18" />
+    <!-- Longitudes -->
+    <line x1="0" y1="-95" x2="0" y2="95" stroke-width="2.6" />
+    <ellipse cx="0" cy="0" rx="36" ry="95" />
+    <ellipse cx="0" cy="0" rx="68" ry="95" />
+  </g>
+
+  <!-- GOLDEN MONUMENT (TUGU / OBELISK) -->
+  <g transform="translate(250, 115)">
+    <!-- Monument Pyramidion Tip -->
+    <polygon points="0,0 -16,38 0,38" fill="url(#monumentLeft)" />
+    <polygon points="0,0 16,38 0,38" fill="url(#monumentRight)" />
+    <!-- Upper Shaft Section -->
+    <polygon points="-16,38 0,38 0,165 -22,165" fill="url(#monumentLeft)" />
+    <polygon points="0,38 16,38 22,165 0,165" fill="url(#monumentRight)" />
+    <!-- Shaft Horizontal Groove Bands -->
+    <line x1="-18" y1="75" x2="18" y2="75" stroke="#78350f" stroke-width="1.8" opacity="0.6" />
+    <line x1="-19" y1="105" x2="19" y2="105" stroke="#78350f" stroke-width="1.8" opacity="0.6" />
+    <line x1="-21" y1="135" x2="21" y2="135" stroke="#78350f" stroke-width="1.8" opacity="0.6" />
+    <!-- Monument Base Pedestal -->
+    <polygon points="-26,165 0,165 0,205 -32,205" fill="url(#monumentLeft)" />
+    <polygon points="0,165 26,165 32,205 0,205" fill="url(#monumentRight)" />
+    <!-- Outline definition for Monument -->
+    <polyline points="-16,38 0,0 16,38 22,165 32,205 -32,205 -22,165 -16,38"
+              fill="none" stroke="#78350f" stroke-width="2" />
+    <line x1="0" y1="0" x2="0" y2="205" stroke="#78350f" stroke-width="1.8" />
+  </g>
+
+  <!-- TWO DANCING / REJOICING HUMAN FIGURES -->
+  <!-- Left Figure -->
+  <g transform="translate(202, 235)">
+    <!-- Head -->
+    <circle cx="0" cy="-32" r="16" fill="#00b0ff" stroke="#0284c7" stroke-width="2" />
+    <!-- Dynamic Raised Body and Arms -->
+    <path d="M 0,-14
+             C -16,-20 -28,-36 -38,-44
+             C -32,-30 -22,-14 -12,0
+             C -20,16 -32,32 -36,44
+             C -22,38 -12,24 0,10
+             C 12,24 18,34 22,44
+             C 18,30 14,14 10,-2
+             C 20,-14 26,-28 28,-40
+             C 20,-32 10,-18 0,-14 Z"
+          fill="#9370db"
+          stroke="#673ab7"
+          stroke-width="1.5" />
+  </g>
+
+  <!-- Right Figure -->
+  <g transform="translate(298, 235) scale(-1, 1)">
+    <!-- Head -->
+    <circle cx="0" cy="-32" r="16" fill="#00b0ff" stroke="#0284c7" stroke-width="2" />
+    <!-- Dynamic Raised Body and Arms -->
+    <path d="M 0,-14
+             C -16,-20 -28,-36 -38,-44
+             C -32,-30 -22,-14 -12,0
+             C -20,16 -32,32 -36,44
+             C -22,38 -12,24 0,10
+             C 12,24 18,34 22,44
+             C 18,30 14,14 10,-2
+             C 20,-14 26,-28 28,-40
+             C 20,-32 10,-18 0,-14 Z"
+          fill="#9370db"
+          stroke="#673ab7"
+          stroke-width="1.5" />
+  </g>
+
+  <!-- WREATH: COTTON & NAVY RICE/LAUREL LEAVES -->
+  <!-- Left Laurel/Rice Leaves (Navy Blue) -->
+  <g fill="#1a365d" stroke="#0f2240" stroke-width="1.2">
+    <!-- Leaf pair 1 -->
+    <path d="M 112,320 C 85,305 75,270 70,230 C 88,245 105,275 112,320 Z" />
+    <path d="M 125,325 C 100,295 95,260 92,225 C 110,245 120,285 125,325 Z" />
+    <!-- Leaf pair 2 -->
+    <path d="M 132,342 C 108,325 90,290 85,255 C 105,270 120,305 132,342 Z" />
+    <path d="M 145,348 C 120,328 108,295 106,260 C 124,280 135,315 145,348 Z" />
+    <!-- Leaf pair 3 -->
+    <path d="M 155,362 C 132,350 115,320 110,290 C 128,305 142,335 155,362 Z" />
+    <path d="M 170,368 C 145,355 130,325 128,295 C 145,315 160,345 170,368 Z" />
+  </g>
+
+  <!-- Right Laurel/Rice Leaves (Navy Blue) -->
+  <g transform="translate(500, 0) scale(-1, 1)" fill="#1a365d" stroke="#0f2240" stroke-width="1.2">
+    <!-- Leaf pair 1 -->
+    <path d="M 112,320 C 85,305 75,270 70,230 C 88,245 105,275 112,320 Z" />
+    <path d="M 125,325 C 100,295 95,260 92,225 C 110,245 120,285 125,325 Z" />
+    <!-- Leaf pair 2 -->
+    <path d="M 132,342 C 108,325 90,290 85,255 C 105,270 120,305 132,342 Z" />
+    <path d="M 145,348 C 120,328 108,295 106,260 C 124,280 135,315 145,348 Z" />
+    <!-- Leaf pair 3 -->
+    <path d="M 155,362 C 132,350 115,320 110,290 C 128,305 142,335 155,362 Z" />
+    <path d="M 170,368 C 145,355 130,325 128,295 C 145,315 160,345 170,368 Z" />
+  </g>
+
+  <!-- Cotton Flowers (Left Side) -->
+  <g>
+    <!-- Cotton Boll 1 -->
+    <g transform="translate(162, 230)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+    <!-- Cotton Boll 2 -->
+    <g transform="translate(148, 260)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+    <!-- Cotton Boll 3 -->
+    <g transform="translate(138, 292)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+    <!-- Cotton Boll 4 -->
+    <g transform="translate(150, 325)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+  </g>
+
+  <!-- Cotton Flowers (Right Side) -->
+  <g transform="translate(500, 0) scale(-1, 1)">
+    <!-- Cotton Boll 1 -->
+    <g transform="translate(162, 230)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+    <!-- Cotton Boll 2 -->
+    <g transform="translate(148, 260)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+    <!-- Cotton Boll 3 -->
+    <g transform="translate(138, 292)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+    <!-- Cotton Boll 4 -->
+    <g transform="translate(150, 325)">
+      <circle cx="-5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="5" cy="-2" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <circle cx="0" cy="5" r="7" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+      <path d="M -8,8 Q 0,16 8,8 Q 0,4 -8,8" fill="#16a34a" />
+    </g>
+  </g>
+
+  <!-- WARM RADIANT GLOW BEHIND BOOK -->
+  <circle cx="250" cy="330" r="75" fill="url(#bookGlow)" />
+
+  <!-- OPEN BOOK (AL-QUR'AN / BUKU PELAJARAN) -->
+  <g id="open-book">
+    <!-- Left Bookmark Ribbon (Red) -->
+    <path d="M 242,345 L 242,374 L 249,368 L 256,374 L 256,345 Z" fill="#dc2626" />
+
+    <!-- Book Cover Base (Terracotta/Brown) -->
+    <path d="M 250,345 
+             L 170,320 
+             L 165,342 
+             L 245,370 
+             Z"
+          fill="#9a3412"
+          stroke="#7c2d12"
+          stroke-width="1.8" />
+    <path d="M 250,345 
+             L 330,320 
+             L 335,342 
+             L 255,370 
+             Z"
+          fill="#9a3412"
+          stroke="#7c2d12"
+          stroke-width="1.8" />
+
+    <!-- Book Pages Block (Thick Page Edge) -->
+    <path d="M 172,323 L 168,338 L 246,364 L 249,348 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="1.2" />
+    <path d="M 328,323 L 332,338 L 254,364 L 251,348 Z" fill="#fed7aa" stroke="#ea580c" stroke-width="1.2" />
+
+    <!-- Open Top Pages (Left Wing) -->
+    <path d="M 249,346 
+             C 220,332 195,316 172,323 
+             C 178,312 210,314 249,335 
+             Z"
+          fill="#ffedd5"
+          stroke="#c2410c"
+          stroke-width="1.5" />
+    <!-- Additional page layer left -->
+    <path d="M 249,344 
+             C 222,330 198,314 175,321 
+             C 180,310 212,312 249,333 
+             Z"
+          fill="#ffffff"
+          stroke="#ea580c"
+          stroke-width="1.2" />
+
+    <!-- Open Top Pages (Right Wing) -->
+    <path d="M 251,346 
+             C 280,332 305,316 328,323 
+             C 322,312 290,314 251,335 
+             Z"
+          fill="#ffedd5"
+          stroke="#c2410c"
+          stroke-width="1.5" />
+    <!-- Additional page layer right -->
+    <path d="M 251,344 
+             C 278,330 302,314 325,321 
+             C 320,310 288,312 251,333 
+             Z"
+          fill="#ffffff"
+          stroke="#ea580c"
+          stroke-width="1.2" />
+
+    <!-- Central Spine Highlight -->
+    <line x1="250" y1="333" x2="250" y2="368" stroke="#7c2d12" stroke-width="2.5" />
+  </g>
+
+  <!-- OFFICIAL SCHOOL NAME TYPOGRAPHY -->
+  <g id="logo-text">
+    <text x="250" y="404"
+          text-anchor="middle"
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+          font-weight="900"
+          font-size="22"
+          fill="#1e3a8a"
+          letter-spacing="0.4">UPT SD NEGERI 275 GRESIK</text>
+
+    <text x="250" y="423"
+          text-anchor="middle"
+          font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+          font-weight="800"
+          font-size="14.5"
+          fill="#1e3a8a"
+          letter-spacing="1.8">BANGERAN-DUKUN</text>
+  </g>
+</svg>

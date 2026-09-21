@@ -1,0 +1,8 @@
+{
+  "name": "Remix SI-PASTI - UPT SD Negeri 275 Gresik",
+  "description": "Strategi Optimalisasi Aset Internal untuk Peningkatan Prestasi Murid di UPT SD Negeri 275 Gresik",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
